@@ -1,0 +1,63 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="label-div">
+        <label class="heading">Customer Details</label><br>
+    </div>
+	
+	<aside>
+	<div class="center">
+		<h2 class="t2">SEND MONEY</h2>
+		<form method="post">
+			{% csrf_token %}
+		<div class="text-field">
+			<label>Email</label>
+			<input type="Email" name="send_email" placeholder="Enter your Email">
+		</div>
+		<div class="text-field">
+			<label>Amount</label>
+			<input type="text" name="amount" placeholder="Enter Amount">
+		</div>
+			<select id="email" name="email">
+				<option value="{{email}}">Select Reciever </option>
+				{% for i in customers %}
+				<option value="{{i.email}}">{{i.name}}</option>
+				{% endfor %}
+
+			</select><br>
+			<input type="submit" name="submit" value="SEND">
+		</form>
+	</div>
+	</aside>
+
+	<section>
+		
+		<table class="table1">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Email</th>
+					<th>Account Balance</th>
+				</tr>
+			</thead>
+			<body>
+				{% for i in customers %}
+				<tr>
+					
+					<td>{{i.name}}</td>
+					<td>{{i.email}}</td>
+					<td>₹ {{i.available_balance}}</td>
+				</tr>
+				{% endfor %}
+			</body>
+
+		</table>
+
+		{% if amount == 0 %}
+			<h2>Account balance is 0</h2>
+		{% endif %}
+	</section>
+	
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{% load static %}
+
+<nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+        <i class="fa fa-bars"></i>
+    </label>
+    <a href="{% url 'home' %}" class="logo">TSF Banking System</a>
+    <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'customers' %}">Customers</a></li>
+        <li><a href="{% url 'transactions' %}">Transactions</a></li>
+    </ul>
+</nav>

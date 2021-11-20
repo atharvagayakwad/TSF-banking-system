@@ -1,0 +1,38 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block content %}
+	<section>
+        <div class="label-div">
+            <label class="heading">Transaction Details</label><br>
+        </div>
+		<label class="t1"></label>
+		<table class="table1">
+			<thead>
+				<tr>
+					
+					<th>Name</th>
+					<th>Email</th>
+					<th>Amount Debited</th>
+					<th>Amount Credited</th>
+					<th>Account Balance</th>
+				</tr>
+			</thead>
+			<body>
+				{% for i in transactions %}
+				<tr>
+					
+					<td>{{i.name}}</td>
+					<td>{{i.email}}</td>
+					<td>₹ {{i.debit_amount}}</td>
+					<td>₹ {{i.credit_amount}}</td>
+					<td>₹ {{i.account_balance}}</td>
+				</tr>
+				{% endfor %}
+			</body>
+
+		</table>
+		<label id="Refresh"><a href="{% url 'transactions' %}" class="btn-refresh">Refresh</a></label>
+	</section>
+	
+{% endblock %}
