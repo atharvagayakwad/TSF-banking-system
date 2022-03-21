@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 
 :root {
-  --primary-color: linear-gradient(#4b6cb7, #182848);
+  --primary-color:linear-gradient(#b92b27, #1565C0);
   --font-used: "Roboto", sans-serif;
 }
 
@@ -12,8 +12,6 @@
   box-sizing: border-box;
 }
 
-
-
 nav {
   background: var(--primary-color);
   height: 80px;
@@ -21,17 +19,17 @@ nav {
 }
 a.logo {
   font-family: var(--font-used);
-  color: white;
+  color: black;
   font-size: 2.5rem;
   line-height: 80px;
-  letter-spacing:1px;
+  letter-spacing: 1px;
   padding: 0 50px;
   font-weight: bold;
   text-transform: uppercase;
 }
 
-a.logo:hover{
-  background:none;
+a.logo:hover {
+  background: none;
 }
 
 nav ul {
@@ -46,7 +44,7 @@ nav ul li {
   font-weight: 500;
 }
 nav ul li a {
-  color: white;
+  color: black;
   font-size: 17px;
   padding: 7px 13px;
   border: 3px;
@@ -57,11 +55,9 @@ nav ul li a {
 a.active,
 a:hover {
   background: #5978be;
-
 }
 
 .home {
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -72,7 +68,6 @@ a:hover {
 }
 
 .features {
-
   width: 100vw;
   max-width: 100%;
   margin-top: 4rem;
@@ -82,21 +77,20 @@ a:hover {
   flex-wrap: wrap;
 }
 
-@media (max-width: 952px){
-    .features{
-        flex-direction: column;
-        justify-content:space-between;
-    }
+@media (max-width: 952px) {
+  .features {
+    flex-direction: column;
+    justify-content: space-between;
+  }
 
-    .features>div{
-        margin: 1rem 0;
-    }
+  .features > div {
+    margin: 1rem 0;
+  }
 
-    .features img {
-        height: 100px;
-        width: 300px;
-      }
-      
+  .features img {
+    height: 100px;
+    width: 300px;
+  }
 }
 
 .features img {
@@ -132,7 +126,6 @@ a:hover {
   display: none;
 }
 @media (max-width: 952px) {
-
   label.logo {
     font-size: 20px;
     padding-left: 50px;
@@ -189,10 +182,9 @@ a:hover {
   font-family: var(--font-used);
 }
 
-.label-div{
-
-    text-align: center;
-    padding-top: 1rem;
+.label-div {
+  text-align: center;
+  padding-top: 1rem;
 }
 
 .p1 {
@@ -214,10 +206,10 @@ a:hover {
   font-weight: bold;
 }
 
-.t2{
-    color: white;
-    font-family: var(--font-used);
-    font-size: 2.5rem;
+.t2 {
+  color: white;
+  font-family: var(--font-used);
+  font-size: 2.5rem;
 }
 .table1 {
   border-collapse: collapse;
@@ -230,10 +222,10 @@ a:hover {
 }
 .table1 thead tr {
   background: var(--primary-color);
-  color: white;
+  color: black;
   text-align: left;
   font-weight: bold;
-  letter-spacing:0.5px;
+  letter-spacing: 0.5px;
 }
 .table1 th,
 .table1 td {
@@ -248,8 +240,8 @@ a:hover {
   background-color: #f3f3f3b6;
 }
 .table1 tbody tr:last-of-type {
-  border-bottom: 2px solid ;
-  border-color: var(--primary-color)
+  border-bottom: 2px solid;
+  border-color: var(--primary-color);
 }
 .center {
   position: relative;
@@ -258,7 +250,7 @@ a:hover {
   overflow: hidden;
   margin: 150px 20px;
   border-radius: 10px;
-  padding: 1rem 1.5rem
+  padding: 1rem 1.5rem;
 }
 h2 {
   text-align: center;
@@ -267,15 +259,12 @@ h2 {
 }
 .center form {
   padding: 0 40px;
-
 }
 
-.center label{
-    color: #eee;
-    font-family: var(--font-used);
+.center label {
+  color: #eee;
+  font-family: var(--font-used);
 }
-
-
 
 input[type="text"],
 #email,
@@ -307,10 +296,10 @@ input[type="submit"]:hover {
 }
 
 .btn-refresh {
-    border: 2px solid ;
-    font-size:1rem;
-    padding: 0.2rem 0.5rem;
-    font-family: var(--font-used); 
-    background:var(--primary-color);
-    color: #eee;
+  border: 2px solid;
+  font-size: 1rem;
+  padding: 0.2rem 0.5rem;
+  font-family: var(--font-used);
+  background: var(--primary-color);
+  color: #eee;
 }
